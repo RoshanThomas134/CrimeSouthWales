@@ -15,7 +15,7 @@ st.set_page_config(page_title="UK Crime Dashboard", layout="wide")
 # ─── LOAD DATA ───
 @st.cache_data
 def load_data():
-    df = pd.read_excel('/Users/roshanthomas/Documents/UK Crime data/Cleaned_DA_Assessment_final.xlsb')
+    df = pd.read_excel('Cleaned_DA_Assessment_final.xlsb')
     df["Month"] = pd.to_datetime(df["Month"], errors="coerce")
     return df.dropna(subset=["Month"])
 
